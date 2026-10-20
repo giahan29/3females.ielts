@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishMaster - Nền Tảng Ôn Luyện Tiếng Anh Toàn Diện</title>
+    <!-- Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG (NAVBAR) -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> English<span>Master</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" onclick="switchTab('home')"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+            <li><a href="#" onclick="switchTab('skills')"><i class="fa-solid fa-layer-group"></i> Kỹ Năng</a></li>
+            <li><a href="#" onclick="switchTab('mocktest')"><i class="fa-solid fa-file-pen"></i> Thi Thử & AI Teacher</a></li>
+            <li><a href="#" onclick="switchTab('shadowing')"><i class="fa-solid fa-microphone-lines"></i> Luyện Shadowing</a></li>
+        </ul>
+        <div class="user-badge">
+            <i class="fa-solid fa-user-graduate"></i> Chào bạn!
+        </div>
+    </nav>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="main-container">
+
+        <!-- 1. TRANG CHỦ -->
+        <section id="home-tab" class="tab-content active">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>Chinh Phục Tiếng Anh <br><span>Dễ Dàng & Đỉnh Cao</span></h1>
+                    <p>Nền tảng ôn luyện toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết chuẩn quốc tế, kết hợp trợ lý AI thông minh chấm điểm và nhận xét tận tâm như giáo viên bản ngữ.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="switchTab('skills')"><i class="fa-solid fa-rocket"></i> Khám Phá Ngay</button>
+                        <button class="btn-secondary" onclick="switchTab('mocktest')"><i class="fa-solid fa-laptop-code"></i> Thi Thử Phổ Thông</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card c1"><i class="fa-solid fa-book-open text-blue"></i> Reading & Writing</div>
+                    <div class="floating-card c2"><i class="fa-solid fa-headphones text-pink"></i> Listening Pods</div>
+                    <div class="floating-card c3"><i class="fa-solid fa-comments text-green"></i> AI Speaking Chat</div>
+                    <div class="cute-mascot"><i class="fa-solid fa-cat"></i></div>
+                </div>
+            </div>
+
+            <div class="features-overview">
+                <h2>Các Tính Năng Nổi Bật</h2>
+                <div class="overview-grid">
+                    <div class="overview-card" onclick="openSkillDetail('reading')">
+                        <i class="fa-solid fa-book-reader" style="color: #4f46e5;"></i>
+                        <h3>Reading & Writing</h3>
+                        <p>Kho tài liệu đa dạng chủ đề từ Cambridge, bài mẫu chuẩn band cao.</p>
+                    </div>
+                    <div class="overview-card" onclick="openSkillDetail('listening')">
+                        <i class="fa-solid fa-headphones-simple" style="color: #ec4899;"></i>
+                        <h3>Listening Practice</h3>
+                        <p>Luyện nghe audio chuẩn bản ngữ kèm script chi tiết.</p>
+                    </div>
+                    <div class="overview-card" onclick="switchTab('shadowing')">
+                        <i class="fa-solid fa-microphone" style="color: #10b981;"></i>
+                        <h3>Shadowing Pro</h3>
+                        <p>Công nghệ hiển thị phụ đề câu nói trực tiếp, luyện phát âm siêu chuẩn.</p>
+                    </div>
+                    <div class="overview-card" onclick="switchTab('mocktest')">
+                        <i class="fa-solid fa-award" style="color: #f59e0b;"></i>
+                        <h3>Thi Thử & AI Teacher</h3>
+                        <p>Bài thi 4 kỹ năng kèm nhận xét chi tiết, tận tâm từ giáo viên AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TRANG KỸ NĂNG (CHIA RIÊNG TỪNG Ô) -->
+        <section id="skills-tab" class="tab-content">
+            <div class="section-header">
+                <h2>Kho Kỹ Năng & Tài Liệu Chuyên Sâu</h2>
+                <p>Click vào từng ô kỹ năng bên dưới để truy cập kho bài mẫu, từ vựng và kiến thức chính xác từ Cambridge / DOL English.</p>
+            </div>
+
+            <div class="skill-boxes-grid">
+                <!-- Ô Reading -->
+                <div class="skill-box card-reading" onclick="openSkillDetail('reading')">
+                    <div class="box-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Reading (Đọc Hiểu)</h3>
+                    <p>Tổng hợp bài đọc đa dạng chủ đề (Environment, Technology, Education), từ vựng nâng cao và câu hỏi luyện tập.</p>
+                    <span class="explore-link">Khám phá ngay <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- Ô Writing -->
+                <div class="skill-box card-writing" onclick="openSkillDetail('writing')">
+                    <div class="box-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Writing (Viết Luận)</h3>
+                    <p>Bài mẫu Essay Band 8.0+, Task 1 & Task 2, cấu trúc câu ăn điểm và từ nối phong phú.</p>
+                    <span class="explore-link">Khám phá ngay <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- Ô Listening -->
+                <div class="skill-box card-listening" onclick="openSkillDetail('listening')">
+                    <div class="box-icon"><i class="fa-solid fa-headphones"></i></div>
+                    <h3>Listening (Nghe Hiểu)</h3>
+                    <p>Audio chất lượng cao mô phỏng đề thi Cambridge & IELTS, kèm transcript và từ vựng bắt tai.</p>
+                    <span class="explore-link">Khám phá ngay <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- Ô Speaking -->
+                <div class="skill-box card-speaking" onclick="openSkillDetail('speaking')">
+                    <div class="box-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Speaking & AI Chat</h3>
+                    <p>Giao lưu đối đáp trực tiếp với trợ lý AI, luyện phản xạ và từ vựng idiom tự nhiên.</p>
+                    <span class="explore-link">Khám phá ngay <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Khu vực hiển thị chi tiết tài liệu khi click vào 1 ô kỹ năng -->
+            <div id="skill-detail-container" class="skill-detail-box" style="display: none;">
+                <button class="btn-close-detail" onclick="closeSkillDetail()"><i class="fa-solid fa-xmark"></i> Đóng</button>
+                <div id="skill-detail-content"></div>
+            </div>
+        </section>
+
+        <!-- 3. THI THỬ & AI TEACHER -->
+        <section id="mocktest-tab" class="tab-content">
+            <div class="section-header">
+                <h2>Bài Thi Thử Phổ Thông (4 Kỹ Năng) & AI Teacher</h2>
+                <p>Làm bài thi tổng hợp mô phỏng kỳ thi thật. Sau khi nộp bài, giáo viên AI sẽ nhận xét tận tâm, chỉ rõ điểm cần sửa.</p>
+            </div>
+
+            <div class="mocktest-wrapper">
+                <div class="test-intro-card">
+                    <h3><i class="fa-solid fa-file-invoice"></i> Đề Thi Thử Tiếng Anh THPT / Cambridge Standard</h3>
+                    <p><b>Cấu trúc đề:</b> Reading (10 câu) - Listening (5 câu) - Writing (Viết đoạn văn ngắn) - Speaking (Gửi đoạn ghi âm).</p>
+                    <button class="btn-primary" onclick="startMockTest()"><i class="fa-solid fa-play"></i> Bắt Đầu Làm Bài Thi</button>
+                </div>
+
+                <!-- Giao diện làm bài thi (Ẩn ban đầu) -->
+                <div id="test-taking-area" style="display: none;" class="test-taking-card">
+                    <h3 id="test-title">Đang tải đề thi...</h3>
+                    <div id="test-questions-container"></div>
+                    <button class="btn-primary" onclick="submitMockTest()"><i class="fa-solid fa-paper-plane"></i> Nộp Bài & Nhận Nhận Xét Từ AI Teacher</button>
+                </div>
+
+                <!-- Khu vực nhận xét chuyên nghiệp của AI Teacher -->
+                <div id="ai-feedback-area" style="display: none;" class="ai-feedback-card">
+                    <div class="teacher-avatar">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <div>
+                            <h4>Nhận xét từ AI Teacher (Góc độ chuyên gia)</h4>
+                            <p>Đánh giá tận tâm, chi tiết và định hướng cải thiện.</p>
+                        </div>
+                    </div>
+                    <div id="ai-feedback-content" class="feedback-content-box"></div>
+                    <button class="btn-secondary" onclick="resetMockTest()"><i class="fa-solid fa-rotate-right"></i> Làm Bài Thi Khác</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. LUYỆN SHADOWING (QUAN TRỌNG) -->
+        <section id="shadowing-tab" class="tab-content">
+            <div class="section-header">
+                <h2>Luyện Shadowing & Cải Thiện Phát Âm</h2>
+                <p>Nghe mẫu câu chuẩn bản ngữ, bấm ghi âm đọc theo và quan sát <b>phụ đề câu nói hiển thị trực tiếp</b> để chỉnh sửa phát âm hoàn hảo.</p>
+            </div>
+
+            <div class="shadowing-container">
+                <div class="shadowing-player-card">
+                    <div class="sample-sentence-box">
+                        <span class="badge-level">Mẫu Câu #1 (Intermediate)</span>
+                        <h3 id="shadowing-target-text">"Success is not final, failure is not fatal: it is the courage to continue that counts."</h3>
+                        <p class="translation-text">Dịch: Thành công không phải là vũng kết, thất bại không phải là tận thế: chính sự dũng cảm để tiếp tục mới là điều quan trọng.</p>
+                    </div>
+
+                    <div class="audio-controls-row">
+                        <button class="btn-audio" onclick="playSampleAudio()"><i class="fa-solid fa-volume-high"></i> Nghe Mẫu</button>
+                        <button class="btn-record" id="record-btn" onclick="toggleRecording()"><i class="fa-solid fa-microphone"></i> <span id="record-text">Bắt Đầu Ghi Âm</span></button>
+                    </div>
+
+                    <!-- PHẦN HIỂN THỊ PHỤ ĐỀ NGƯỜI DÙNG VỪA NÓI (QUAN TRỌNG NHẤT) -->
+                    <div class="subtitle-display-box">
+                        <h4><i class="fa-solid fa-closed-captioning"></i> Phụ Đề Giọng Nói Của Bạn (Live Subtitle):</h4>
+                        <div id="live-subtitle-output" class="subtitle-box-inner">
+                            <span class="placeholder-sub">Bấm "Bắt Đầu Ghi Âm" và nói câu trên để hệ thống hiển thị phụ đề và phân tích phát âm...</span>
+                        </div>
+                    </div>
+
+                    <div id="pronunciation-score-box" style="display: none;" class="score-analysis-box">
+                        <h4><i class="fa-solid fa-chart-line"></i> Kết Quả Đánh Giá Phát Âm:</h4>
+                        <div class="score-row">
+                            <span>Độ chính xác (Accuracy): <b class="text-green" id="acc-score">92%</b></span>
+                            <span>Trôi chảy (Fluency): <b class="text-blue" id="flu-score">88%</b></span>
+                        </div>
+                        <p id="pronunciation-tips" class="tips-text">💡 <b>Lời khuyên từ cô giáo:</b> Phát âm từ "courage" rất tốt! Tuy nhiên hãy chú ý nối âm ở cụm "it is".</p>
+                    </div>
+                </div>
+
+                <div class="shadowing-playlist">
+                    <h3>Chọn Câu Luyện Tập Khác</h3>
+                    <ul class="playlist-items">
+                        <li onclick="changeShadowingSentence(0, this)" class="active-item">1. Success is not final...</li>
+                        <li onclick="changeShadowingSentence(1, this)">2. The future belongs to those who believe...</li>
+                        <li onclick="changeShadowingSentence(2, this)">3. Education is the most powerful weapon...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer>
+        <p>&copy; 2026 EnglishMaster - Nền tảng ôn luyện tiếng Anh chất lượng cao. Thiết kế dành riêng cho bài thực hành xuất sắc.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* RESET & BIẾN MÀU SẮC */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-light: #6366f1;
+    --secondary: #ec4899;
+    --accent: #10b981;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --radius: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: #eef2ff;
+    color: var(--primary);
+}
+
+.user-badge {
+    background: #fdf2f8;
+    color: var(--secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    flex: 1;
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* TRANG CHỦ HERO */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text h1 span {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary, .btn-secondary, .btn-audio, .btn-record {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.hero-image {
+    position: relative;
+    height: 350px;
+    background: linear-gradient(135deg, #eef2ff 0%, #fdf2f8 100%);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-card {
+    position: absolute;
+    background: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.c1 { top: 30px; left: -20px; }
+.c2 { bottom: 40px; right: -20px; }
+.c3 { top: 150px; right: -30px; }
+.cute-mascot {
+    font-size: 5rem;
+    color: var(--secondary);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* FEATURES OVERVIEW */
+.features-overview {
+    margin-top: 4rem;
+}
+
+.features-overview h2, .section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.section-header p, .features-overview p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.overview-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.overview-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.overview-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.overview-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* KỸ NĂNG - CHIA RIÊNG TỪNG Ô */
+.skill-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media(max-width: 768px) {
+    .skill-boxes-grid, .hero-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 6px solid var(--primary);
+}
+
+.skill-box.card-reading { border-top-color: #4f46e5; }
+.skill-box.card-writing { border-top-color: #ec4899; }
+.skill-box.card-listening { border-top-color: #f59e0b; }
+.skill-box.card-speaking { border-top-color: #10b981; }
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+}
+
+.box-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-reading .box-icon { color: #4f46e5; }
+.card-writing .box-icon { color: #ec4899; }
+.card-listening .box-icon { color: #f59e0b; }
+.card-speaking .box-icon { color: #10b981; }
+
+.skill-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.skill-box p {
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.explore-link {
+    font-weight: 700;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* DETAIL BOX KỸ NĂNG */
+.skill-detail-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.btn-close-detail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* THI THỬ VÀ AI TEACHER */
+.mocktest-wrapper {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.test-intro-card, .test-taking-card, .ai-feedback-card {
+    margin-bottom: 1.5rem;
+}
+
+.test-taking-card h3, .test-intro-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.question-block {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.question-block p {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.options-list label {
+    display: block;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.options-list input {
+    margin-right: 8px;
+}
+
+.ai-feedback-card {
+    background: #f0fdf4;
+    border: 2px solid #bbf7d0;
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+.teacher-avatar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.teacher-avatar i {
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+.feedback-content-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* SHADOWING PRO (QUAN TRỌNG) */
+.shadowing-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+@media(max-width: 768px) {
+    .shadowing-container { grid-template-columns: 1fr; }
+}
+
+.shadowing-player-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.sample-sentence-box {
+    background: #eef2ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--primary);
+}
+
+.badge-level {
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.sample-sentence-box h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: var(--text-main);
+}
+
+.translation-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.audio-controls-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-audio {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.btn-record {
+    background: #ffeeec;
+    color: #e11d48;
+}
+
+.btn-record.recording {
+    background: #e11d48;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(225, 29, 72, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+/* PHỤ ĐỀ TRỰC TIẾP (LIVE SUBTITLE) */
+.subtitle-display-box {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle-display-box h4 {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.subtitle-box-inner {
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.placeholder-sub {
+    color: #64748b;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.score-analysis-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.text-green { color: var(--accent); }
+.text-blue { color: var(--primary); }
+.tips-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+
+/* PLAYLIST SHADOWING */
+.shadowing-playlist {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.shadowing-playlist h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.playlist-items {
+    list-style: none;
+}
+
+.playlist-items li {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.playlist-items li:hover, .playlist-items li.active-item {
+    background: #eef2ff;
+    color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+// CHUYỂN ĐỔI TAB THANH ĐIỀU HƯỚNG
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    document.getElementById(tabId + '-tab').classList.add('active');
+    
+    // Kích hoạt active menu link tương ứng
+    event && event.currentTarget && event.currentTarget.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// KHO TÀI LIỆU CHI TIẾT CHUẨN ĐỘC QUYỀN CHO TỪNG KỸ NĂNG (DOL English & Cambridge Standard)
+const skillDataContent = {
+    reading: `
+        <h2><i class="fa-solid fa-book-open" style="color: #4f46e5;"></i> Reading Master - Tài liệu Đọc Hiểu chuẩn Cambridge</h2>
+        <p class="text-muted">Tổng hợp bài mẫu Reading, từ vựng học thuật (Academic Vocabulary) và phương pháp Skimming/Scanning chuyên sâu.</p>
+        <hr style="margin: 1.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+        <div class="reading-sample">
+            <h3 style="color:var(--primary); margin-bottom:10px;">Chủ đề: The Impact of Artificial Intelligence on Future Education</h3>
+            <p><b>Passage Overview:</b> In recent years, artificial intelligence (AI) has transformed traditional educational paradigms. Adaptive learning platforms, inspired by frameworks from institutions like Cambridge, allow customized learning paths tailored to individual student performance...</p>
+            <br>
+            <h4>Từ Vựng Ăn Điểm (Key Vocabulary):</h4>
+            <ul style="margin-left: 20px; line-height: 1.8; color: var(--text-muted);">
+                <li><b>Paradigm (n):</b> Mô hình, khuôn mẫu</li>
+                <li><b>Adaptive learning (n):</b> Học tập thích ứng</li>
+                <li><b>Tailor (v):</b> May đo, điều chỉnh cho phù hợp</li>
+            </ul>
+        </div>
+    `,
+    writing: `
+        <h2><i class="fa-solid fa-pen-nib" style="color: #ec4899;"></i> Writing Master - Bài Mẫu Essay Band 8.0+ & Task 1/2</h2>
+        <p class="text-muted">Hướng dẫn cấu trúc viết luận sắc bén, phân tích đề mẫu và từ nối (Cohesive Devices) ghi điểm tuyệt đối.</p>
+        <hr style="margin: 1.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+        <div class="writing-sample">
+            <h3 style="color:var(--secondary); margin-bottom:10px;">Đề bài: Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. To what extent do you agree?</h3>
+            <div style="background:#f8fafc; padding:1.5rem; border-radius:12px; margin-top:10px; line-height: 1.7;">
+                <p><b>Sample Essay Paragraph:</b> "It is often argued that higher education institutions ought to prioritize vocational training over theoretical knowledge to better prepare students for the modern job market. From my perspective, while academic rigor remains essential, bridging the gap between academia and industry is paramount for graduate employability..."</p>
+            </div>
+        </div>
+    `,
+    listening: `
+        <h2><i class="fa-solid fa-headphones" style="color: #f59e0b;"></i> Listening Master - Kho Audio Luyện Nghe Cambridge</h2>
+        <p class="text-muted">Luyện nghe hội thoại hàng ngày và bài giảng học thuật kèm Transcript chi tiết từng câu.</p>
+        <hr style="margin: 1.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+        <div class="listening-sample">
+            <h3 style="color:#d97706; margin-bottom:10px;">Audio Section 1: Booking a Cultural Center Tour</h3>
+            <audio controls style="width: 100%; margin: 15px 0;">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Trình duyệt của bạn không hỗ trợ thẻ audio.
+            </audio>
+            <h4>Audio Transcript & Từ khóa:</h4>
+            <p style="color: var(--text-muted); margin-top: 10px; line-height: 1.6;">
+                <b>Agent:</b> Good morning, Westside Cultural Centre. How can I help you?<br>
+                <b>Customer:</b> Hello, I'd like to book a guided tour for this coming Saturday afternoon...
+            </p>
+        </div>
+    `,
+    speaking: `
+        <h2><i class="fa-solid fa-comments" style="color: #10b981;"></i> Speaking Master & AI Real-time Chat</h2>
+        <p class="text-muted">Luyện tập phát âm, collocations tự nhiên cho Part 1, Part 2 và Part 3.</p>
+        <hr style="margin: 1.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+        <div class="speaking-sample">
+            <h3 style="color:var(--accent); margin-bottom:10px;">Chủ đề phổ biến: Describe a memorable journey you had</h3>
+            <p style="margin-bottom: 15px;">Bạn có thể thực hành nói câu trả lời mẫu hoặc qua tab <b>Luyện Shadowing</b> để AI hiển thị phụ đề giọng nói của bạn trực tiếp!</p>
+            <div style="background:#f0fdf4; padding:1.5rem; border-radius:12px; border-left: 5px solid var(--accent);">
+                <p><b>Idiom gợi ý:</b> <i>"Hit the road"</i> (Lên đường), <i>"Breathtaking scenery"</i> (Cảnh quan ngoạn mục).</p>
+            </div>
+        </div>
+    `
+};
+
+function openSkillDetail(skillKey) {
+    const detailBox = document.getElementById('skill-detail-container');
+    const contentBox = document.getElementById('skill-detail-content');
+    contentBox.innerHTML = skillDataContent[skillKey];
+    detailBox.style.display = 'block';
+    detailBox.scrollIntoView({ behavior: 'smooth' });
+}
+
+function closeSkillDetail() {
+    document.getElementById('skill-detail-container').style.display = 'none';
+}
+
+// BÀI THI THỬ & NHẬN XÉT TỪ AI TEACHER
+function startMockTest() {
+    document.querySelector('.test-intro-card').style.display = 'none';
+    document.getElementById('test-taking-area').style.display = 'block';
+    document.getElementById('test-title').innerText = "Đề Thi Thử Tiếng Anh THPT / Cambridge Standard (4 Kỹ Năng)";
+    
+    const container = document.getElementById('test-questions-container');
+    container.innerHTML = `
+        <div class="question-block">
+            <p><b>Câu 1 (Reading):</b> Choose the correct word: "She has always been very _____ about her future career goals."</p>
+            <div class="options-list">
+                <label><input type="radio" name="q1" value="A"> A. ambition</label>
+                <label><input type="radio" name="q1" value="B"> B. ambitious</label>
+                <label><input type="radio" name="q1" value="C"> C. ambitiously</label>
+            </div>
+        </div>
+        <div class="question-block">
+            <p><b>Câu 2 (Grammar):</b> If I had studied harder last semester, I _____ the scholarship.</p>
+            <div class="options-list">
+                <label><input type="radio" name="q2" value="A"> A. would get</label>
+                <label><input type="radio" name="q2" value="B"> B. will get</label>
+                <label><input type="radio" name="q2" value="C" id="correct-q2"> C. would have gotten</label>
+            </div>
+        </div>
+        <div class="question-block">
+            <p><b>Câu 3 (Writing - Short Answer):</b> Viết một câu ngắn nêu lợi ích của việc học ngoại ngữ:</p>
+            <input type="text" id="writing-answer-input" placeholder="Nhập câu trả lời của bạn bằng tiếng Anh..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; margin-top: 8px;">
+        </div>
+    `;
+}
+
+function submitMockTest() {
+    document.getElementById('test-taking-area').style.display = 'none';
+    document.getElementById('ai-feedback-area').style.display = 'block';
+    
+    const feedbackBox = document.getElementById('ai-feedback-content');
+    feedbackBox.innerHTML = `
+        <h4 style="color: var(--accent); margin-bottom: 10px;"><i class="fa-solid fa-circle-check"></i> Đã hoàn thành chấm bài tự động!</h4>
+        <p><b>Điểm tổng kết giả định:</b> <span style="font-size: 1.2rem; color: var(--primary); font-weight: 700;">8.5 / 10 (Band Giỏi)</span></p>
+        <br>
+        <p><b>Nhận xét chuyên nghiệp từ AI Teacher (Góc độ một người thầy/cô tận tâm):</b></p>
+        <ul style="margin-left: 20px; line-height: 1.8; margin-top: 10px; color: var(--text-muted);">
+            <li><b>Phần Đọc & Ngữ pháp (Reading & Grammar):</b> Em làm rất xuất sắc ở câu điều kiện loại 3 (Câu 2). Điều này chứng tỏ em nắm vững cấu trúc ngữ pháp nâng cao. Tuy nhiên hãy cẩn thận hơn với từ loại (noun/adjective) ở câu 1.</li>
+            <li><b>Phần Viết (Writing):</b> Câu trả lời ngắn của em rất tự nhiên. Cô lưu ý em nên dùng thêm các trạng từ nhấn mạnh như <i>"significantly"</i> hoặc <i>"broaden one's horizons"</i> để bài viết sắc sảo hơn nữa nhé!</li>
+            <li><b>Lời khuyên cải thiện:</b> Hãy duy trì phong độ đọc mỗi ngày 1 bài báo Cambridge và luyện thêm phần phát âm phản xạ ở mục Shadowing. Em đang tiến bộ rất nhanh! ❤️</li>
+        </ul>
+    `;
+}
+
+function resetMockTest() {
+    document.getElementById('ai-feedback-area').style.display = 'none';
+    document.querySelector('.test-intro-card').style.display = 'block';
+}
+
+// LUYỆN SHADOWING & LIVE SUBTITLE (TÍNH NĂNG QUAN TRỌNG)
+const shadowingSentences = [
+    {
+        text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        translation: "Thành công không phải là vũng kết, thất bại không phải là tận thế: chính sự dũng cảm để tiếp tục mới là điều quan trọng.",
+        tips: "💡 <b>Nhận xét phát âm:</b> Cụm từ 'courage to continue' được bạn phát âm rất rõ âm đuôi (ending sounds). Hãy chú ý nối âm mượt mà hơn ở 'it is'."
+    },
+    {
+        text: "The future belongs to those who believe in the beauty of their dreams.",
+        translation: "Tương lai thuộc về những ai tin vào vẻ đẹp những giấc mơ của họ.",
+        tips: "💡 <b>Nhận xét phát âm:</b> Trọng âm từ 'belongs' và 'beauty' chuẩn xác. Tuyệt vời!"
+    },
+    {
+        text: "Education is the most powerful weapon which you can use to change the world.",
+        translation: "Giáo dục là vũ khí mạnh mẽ nhất mà bạn có thể dùng để thay đổi thế giới.",
+        tips: "💡 <b>Nhận xét phát âm:</b> Nhịp điệu (intonation) tốt, ngắt nghỉ đúng chỗ dấu phẩy."
+    }
+];
+
+let currentSentenceIndex = 0;
+let isRecording = false;
+
+function playSampleAudio() {
+    alert("🔊 Đang phát âm thanh mẫu chuẩn bản ngữ... Hãy lắng nghe kỹ ngữ điệu và trọng âm.");
+}
+
+function changeShadowingSentence(index, element) {
+    currentSentenceIndex = index;
+    document.querySelectorAll('.playlist-items li').forEach(li => li.classList.remove('active-item'));
+    element.classList.add('active-item');
+    
+    document.getElementById('shadowing-target-text').innerText = `"${shadowingSentences[index].text}"`;
+    document.querySelector('.translation-text').innerText = `Dịch: ${shadowingSentences[index].translation}`;
+    
+    // Reset live subtitle
+    document.getElementById('live-subtitle-output').innerHTML = `<span class="placeholder-sub">Bấm "Bắt Đầu Ghi Âm" và nói câu trên để hệ thống hiển thị phụ đề...</span>`;
+    document.getElementById('pronunciation-score-box').style.display = 'none';
+}
+
+function toggleRecording() {
+    const recordBtn = document.getElementById('record-btn');
+    const recordText = document.getElementById('record-text');
+    const subtitleOutput = document.getElementById('live-subtitle-output');
+    const scoreBox = document.getElementById('pronunciation-score-box');
+
+    if (!isRecording) {
+        // Bắt đầu ghi âm giả lập
+        isRecording = true;
+        recordBtn.classList.add('recording');
+        recordText.innerText = "Đang Ghi Âm & Nhận Diện...";
+        subtitleOutput.innerHTML = `<span style="color: #facc15; animation: blink 1s infinite;">🎤 Đang lắng nghe giọng nói của bạn... Hãy nói câu trên to và rõ ràng!</span>`;
+        
+        // Giả lập sau 3 giây hệ thống nhận diện xong và hiển thị phụ đề câu người dùng vừa nói
+        setTimeout(() => {
+            if (isRecording) {
+                isRecording = false;
+                recordBtn.classList.remove('recording');
+                recordText.innerText = "Bắt Đầu Ghi Âm";
+                
+                // HIỂN THỊ PHỤ ĐỀ (LIVE SUBTITLE) CÂU VỪA NÓI
+                subtitleOutput.innerHTML = `<span style="color: #34d399;">"${shadowingSentences[currentSentenceIndex].text}"</span> <i class="fa-solid fa-circle-check" style="color:#34d399; margin-left:10px;"></i>`;
+                
+                // Hiển thị điểm và đánh giá
+                scoreBox.style.display = 'block';
+                document.getElementById('pronunciation-tips').innerHTML = shadowingSentences[currentSentenceIndex].tips;
+            }
+        }, 3500);
+
+    } else {
+        isRecording = false;
+        recordBtn.classList.remove('recording');
+        recordText.innerText = "Bắt Đầu Ghi Âm";
+    }
+}
